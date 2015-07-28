@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int h,m,s;
+char c[2],c1[]="AM",c2[]="PM";
+scanf("%d:%d:%d%s",&h,&m,&s,&c[0]);
+if(strcmp(c,c1) == 0)
+    {
+    if(h==12)
+        {
+        h=00;
+    }
+    printf("%.2d:%.2d:%.2d",h,m,s);
+}
+    
+if(strcmp(c,c2) == 0)
+{
+       h=h+12;
+    if(h==24)
+      h=12;
+    printf("%.2d:%.2d:%.2d\n",h,m,s);
+}
+return 0;
+
+}
