@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int V,n;
+    cin>>V;
+    cin>>n;
+    int ar[n];
+    for(int i=0;i<n;i++)
+       { cin>>ar[i];
+        if(V==ar[i])
+            cout<<i;
+       }
+    
+    return 0;
+}
