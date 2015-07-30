@@ -1,0 +1,45 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <cstring>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+
+/* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+char S[10000], R[10000], ch;
+bool check;
+long int i=0,j;
+int len=-1,t;
+scanf("%d", &t);
+
+while(t--){ 
+    check = false; 
+    scanf("%s",S); 
+    len=strlen(S); 
+    i = 0; j = len - 1;
+
+while (i < len) { R[j]=S[i]; i++; j--; } R[len]='\0';
+
+i=1;
+       while(i<len){
+        if(abs(S[i]-S[i-1]) == abs(R[i]-R[i-1]))
+        {check=true;
+        }
+        else
+        {
+
+        check=false;
+        break;
+        }
+        i++;
+}
+if(check == false)
+printf("Not Funny\n");
+else
+printf("Funny\n");  
+
+} return 0; }
