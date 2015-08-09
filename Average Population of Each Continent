@@ -1,0 +1,1 @@
+SELECT Country.Continent ,FLOOR(AVG(City.Population)) AS AverageCityPopulation FROM Country JOIN City ON City.CountryCode = Country.Code GROUP BY Country.Continent;
